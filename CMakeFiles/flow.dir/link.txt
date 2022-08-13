@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   -pthread CMakeFiles/flow.dir/src/outputframe.cpp.o CMakeFiles/flow.dir/src/getframe.cpp.o CMakeFiles/flow.dir/src/main.cpp.o CMakeFiles/flow.dir/src/setting.cpp.o CMakeFiles/flow.dir/src/EVM.cpp.o CMakeFiles/flow.dir/src/flow.cpp.o  -o bin/flow 

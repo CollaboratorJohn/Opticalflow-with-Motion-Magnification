@@ -1,0 +1,848 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e4fab/fast && /usr/bin/make -f CMakeFiles/cmTC_e4fab.dir/build.make CMakeFiles/cmTC_e4fab.dir/build
+make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_e4fab.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_e4fab.dir/src.c.o   -c /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e4fab
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e4fab.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_e4fab.dir/src.c.o  -o cmTC_e4fab 
+/usr/bin/ld: CMakeFiles/cmTC_e4fab.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e4fab.dir/build.make:87：cmTC_e4fab] 错误 1
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_e4fab/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_54e13/fast && /usr/bin/make -f CMakeFiles/cmTC_54e13.dir/build.make CMakeFiles/cmTC_54e13.dir/build
+make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_54e13.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_54e13.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_54e13
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54e13.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_54e13.dir/CheckFunctionExists.c.o  -o cmTC_54e13  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_54e13.dir/build.make:87：cmTC_54e13] 错误 1
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_54e13/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c02b6/fast && /usr/bin/make -f CMakeFiles/cmTC_c02b6.dir/build.make CMakeFiles/cmTC_c02b6.dir/build
+make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_c02b6.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_c02b6.dir/src.c.o   -c /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_c02b6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c02b6.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_c02b6.dir/src.c.o  -o cmTC_c02b6 
+/usr/bin/ld: CMakeFiles/cmTC_c02b6.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_c02b6.dir/build.make:87：cmTC_c02b6] 错误 1
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_c02b6/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3652f/fast && /usr/bin/make -f CMakeFiles/cmTC_3652f.dir/build.make CMakeFiles/cmTC_3652f.dir/build
+make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_3652f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_3652f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3652f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3652f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_3652f.dir/CheckFunctionExists.c.o  -o cmTC_3652f  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_3652f.dir/build.make:87：cmTC_3652f] 错误 1
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_3652f/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_981c2/fast && make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_981c2.dir/build.make CMakeFiles/cmTC_981c2.dir/build
+make[2]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_981c2.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_981c2.dir/src.c.o   -c /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_981c2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_981c2.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_981c2.dir/src.c.o  -o cmTC_981c2 
+/usr/bin/ld: CMakeFiles/cmTC_981c2.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_981c2.dir/build.make:87：cmTC_981c2] 错误 1
+make[2]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make[1]: *** [Makefile:121：cmTC_981c2/fast] 错误 2
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_34b87/fast && make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_34b87.dir/build.make CMakeFiles/cmTC_34b87.dir/build
+make[2]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_34b87.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_34b87.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_34b87
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34b87.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_34b87.dir/CheckFunctionExists.c.o  -o cmTC_34b87  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_34b87.dir/build.make:87：cmTC_34b87] 错误 1
+make[2]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make[1]: *** [Makefile:121：cmTC_34b87/fast] 错误 2
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1ab02/fast && /usr/bin/make -f CMakeFiles/cmTC_1ab02.dir/build.make CMakeFiles/cmTC_1ab02.dir/build
+make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_1ab02.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_1ab02.dir/src.c.o   -c /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_1ab02
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ab02.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_1ab02.dir/src.c.o  -o cmTC_1ab02 
+/usr/bin/ld: CMakeFiles/cmTC_1ab02.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_1ab02.dir/build.make:87：cmTC_1ab02] 错误 1
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_1ab02/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1d8a4/fast && /usr/bin/make -f CMakeFiles/cmTC_1d8a4.dir/build.make CMakeFiles/cmTC_1d8a4.dir/build
+make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_1d8a4.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_1d8a4.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1d8a4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d8a4.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_1d8a4.dir/CheckFunctionExists.c.o  -o cmTC_1d8a4  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_1d8a4.dir/build.make:87：cmTC_1d8a4] 错误 1
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_1d8a4/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_642fc/fast && make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_642fc.dir/build.make CMakeFiles/cmTC_642fc.dir/build
+make[2]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_642fc.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_642fc.dir/src.c.o   -c /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_642fc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_642fc.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_642fc.dir/src.c.o  -o cmTC_642fc 
+/usr/bin/ld: CMakeFiles/cmTC_642fc.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_642fc.dir/build.make:87：cmTC_642fc] 错误 1
+make[2]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make[1]: *** [Makefile:121：cmTC_642fc/fast] 错误 2
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8fdcb/fast && make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_8fdcb.dir/build.make CMakeFiles/cmTC_8fdcb.dir/build
+make[2]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_8fdcb.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_8fdcb.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8fdcb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8fdcb.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_8fdcb.dir/CheckFunctionExists.c.o  -o cmTC_8fdcb  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_8fdcb.dir/build.make:87：cmTC_8fdcb] 错误 1
+make[2]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make[1]: *** [Makefile:121：cmTC_8fdcb/fast] 错误 2
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_78562/fast && make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_78562.dir/build.make CMakeFiles/cmTC_78562.dir/build
+make[2]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_78562.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_78562.dir/src.c.o   -c /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_78562
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78562.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_78562.dir/src.c.o  -o cmTC_78562 
+/usr/bin/ld: CMakeFiles/cmTC_78562.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_78562.dir/build.make:87：cmTC_78562] 错误 1
+make[2]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make[1]: *** [Makefile:121：cmTC_78562/fast] 错误 2
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ceb20/fast && make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_ceb20.dir/build.make CMakeFiles/cmTC_ceb20.dir/build
+make[2]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_ceb20.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ceb20.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ceb20
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ceb20.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_ceb20.dir/CheckFunctionExists.c.o  -o cmTC_ceb20  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_ceb20.dir/build.make:87：cmTC_ceb20] 错误 1
+make[2]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make[1]: *** [Makefile:121：cmTC_ceb20/fast] 错误 2
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_45053/fast && make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_45053.dir/build.make CMakeFiles/cmTC_45053.dir/build
+make[2]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_45053.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_45053.dir/src.c.o   -c /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_45053
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45053.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_45053.dir/src.c.o  -o cmTC_45053 
+/usr/bin/ld: CMakeFiles/cmTC_45053.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_45053.dir/build.make:87：cmTC_45053] 错误 1
+make[2]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make[1]: *** [Makefile:121：cmTC_45053/fast] 错误 2
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1fcfa/fast && make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_1fcfa.dir/build.make CMakeFiles/cmTC_1fcfa.dir/build
+make[2]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_1fcfa.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_1fcfa.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1fcfa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1fcfa.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_1fcfa.dir/CheckFunctionExists.c.o  -o cmTC_1fcfa  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_1fcfa.dir/build.make:87：cmTC_1fcfa] 错误 1
+make[2]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make[1]: *** [Makefile:121：cmTC_1fcfa/fast] 错误 2
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9ecd0/fast && make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_9ecd0.dir/build.make CMakeFiles/cmTC_9ecd0.dir/build
+make[2]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_9ecd0.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_9ecd0.dir/src.c.o   -c /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_9ecd0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ecd0.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_9ecd0.dir/src.c.o  -o cmTC_9ecd0 
+/usr/bin/ld: CMakeFiles/cmTC_9ecd0.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_9ecd0.dir/build.make:87：cmTC_9ecd0] 错误 1
+make[2]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make[1]: *** [Makefile:121：cmTC_9ecd0/fast] 错误 2
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_af1bc/fast && make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_af1bc.dir/build.make CMakeFiles/cmTC_af1bc.dir/build
+make[2]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_af1bc.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_af1bc.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_af1bc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_af1bc.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_af1bc.dir/CheckFunctionExists.c.o  -o cmTC_af1bc  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_af1bc.dir/build.make:87：cmTC_af1bc] 错误 1
+make[2]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make[1]: *** [Makefile:121：cmTC_af1bc/fast] 错误 2
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4ef83/fast && /usr/bin/make -f CMakeFiles/cmTC_4ef83.dir/build.make CMakeFiles/cmTC_4ef83.dir/build
+make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_4ef83.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_4ef83.dir/src.c.o   -c /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4ef83
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4ef83.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_4ef83.dir/src.c.o  -o cmTC_4ef83 
+/usr/bin/ld: CMakeFiles/cmTC_4ef83.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_4ef83.dir/build.make:87：cmTC_4ef83] 错误 1
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_4ef83/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_09d59/fast && /usr/bin/make -f CMakeFiles/cmTC_09d59.dir/build.make CMakeFiles/cmTC_09d59.dir/build
+make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_09d59.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_09d59.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_09d59
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09d59.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_09d59.dir/CheckFunctionExists.c.o  -o cmTC_09d59  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_09d59.dir/build.make:87：cmTC_09d59] 错误 1
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_09d59/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_916ba/fast && make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_916ba.dir/build.make CMakeFiles/cmTC_916ba.dir/build
+make[2]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_916ba.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_916ba.dir/src.c.o   -c /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_916ba
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_916ba.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_916ba.dir/src.c.o  -o cmTC_916ba 
+/usr/bin/ld: CMakeFiles/cmTC_916ba.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_916ba.dir/build.make:87：cmTC_916ba] 错误 1
+make[2]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make[1]: *** [Makefile:121：cmTC_916ba/fast] 错误 2
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9841b/fast && make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_9841b.dir/build.make CMakeFiles/cmTC_9841b.dir/build
+make[2]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_9841b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_9841b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9841b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9841b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_9841b.dir/CheckFunctionExists.c.o  -o cmTC_9841b  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_9841b.dir/build.make:87：cmTC_9841b] 错误 1
+make[2]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make[1]: *** [Makefile:121：cmTC_9841b/fast] 错误 2
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9a045/fast && make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_9a045.dir/build.make CMakeFiles/cmTC_9a045.dir/build
+make[2]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_9a045.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_9a045.dir/src.c.o   -c /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_9a045
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9a045.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_9a045.dir/src.c.o  -o cmTC_9a045 
+/usr/bin/ld: CMakeFiles/cmTC_9a045.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_9a045.dir/build.make:87：cmTC_9a045] 错误 1
+make[2]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make[1]: *** [Makefile:121：cmTC_9a045/fast] 错误 2
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ea30c/fast && make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_ea30c.dir/build.make CMakeFiles/cmTC_ea30c.dir/build
+make[2]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_ea30c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ea30c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ea30c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ea30c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_ea30c.dir/CheckFunctionExists.c.o  -o cmTC_ea30c  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_ea30c.dir/build.make:87：cmTC_ea30c] 错误 1
+make[2]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make[1]: *** [Makefile:121：cmTC_ea30c/fast] 错误 2
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d8e21/fast && make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_d8e21.dir/build.make CMakeFiles/cmTC_d8e21.dir/build
+make[2]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_d8e21.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_d8e21.dir/src.c.o   -c /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d8e21
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8e21.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_d8e21.dir/src.c.o  -o cmTC_d8e21 
+/usr/bin/ld: CMakeFiles/cmTC_d8e21.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_d8e21.dir/build.make:87：cmTC_d8e21] 错误 1
+make[2]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make[1]: *** [Makefile:121：cmTC_d8e21/fast] 错误 2
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_eefa4/fast && make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_eefa4.dir/build.make CMakeFiles/cmTC_eefa4.dir/build
+make[2]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_eefa4.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_eefa4.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_eefa4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eefa4.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_eefa4.dir/CheckFunctionExists.c.o  -o cmTC_eefa4  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_eefa4.dir/build.make:87：cmTC_eefa4] 错误 1
+make[2]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make[1]: *** [Makefile:121：cmTC_eefa4/fast] 错误 2
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_175d6/fast && make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_175d6.dir/build.make CMakeFiles/cmTC_175d6.dir/build
+make[2]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_175d6.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_175d6.dir/src.c.o   -c /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_175d6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_175d6.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_175d6.dir/src.c.o  -o cmTC_175d6 
+/usr/bin/ld: CMakeFiles/cmTC_175d6.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_175d6.dir/build.make:87：cmTC_175d6] 错误 1
+make[2]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make[1]: *** [Makefile:121：cmTC_175d6/fast] 错误 2
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2cddf/fast && make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_2cddf.dir/build.make CMakeFiles/cmTC_2cddf.dir/build
+make[2]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_2cddf.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2cddf.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2cddf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2cddf.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_2cddf.dir/CheckFunctionExists.c.o  -o cmTC_2cddf  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_2cddf.dir/build.make:87：cmTC_2cddf] 错误 1
+make[2]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make[1]: *** [Makefile:121：cmTC_2cddf/fast] 错误 2
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d5dac/fast && /usr/bin/make -f CMakeFiles/cmTC_d5dac.dir/build.make CMakeFiles/cmTC_d5dac.dir/build
+make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_d5dac.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_d5dac.dir/src.c.o   -c /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d5dac
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5dac.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_d5dac.dir/src.c.o  -o cmTC_d5dac 
+/usr/bin/ld: CMakeFiles/cmTC_d5dac.dir/src.c.o: in function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x4a): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x5b): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_d5dac.dir/build.make:87：cmTC_d5dac] 错误 1
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_d5dac/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_42250/fast && /usr/bin/make -f CMakeFiles/cmTC_42250.dir/build.make CMakeFiles/cmTC_42250.dir/build
+make[1]: 进入目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_42250.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_42250.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_42250
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42250.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_42250.dir/CheckFunctionExists.c.o  -o cmTC_42250  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_42250.dir/build.make:87：cmTC_42250] 错误 1
+make[1]: 离开目录“/home/zengruilin/motion_magnification/magnification/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_42250/fast] 错误 2
+
+
+

@@ -1,0 +1,3 @@
+/home/zengruilin/motion_magnification/magnification/CMakeFiles/rebuild_cache.dir
+/home/zengruilin/motion_magnification/magnification/CMakeFiles/edit_cache.dir
+/home/zengruilin/motion_magnification/magnification/CMakeFiles/framediff.dir
